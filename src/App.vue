@@ -35,8 +35,11 @@ const routes: RouteConfig[] = sectionModel.getRouteConfig();
 
 const router = new VueRouter({routes});
 
-GVL.baseUrl = '/vendorlist';
-
+if(window.location.hostname === 'iabtechlab.github.io'){
+  GVL.baseUrl = '/iabtcf/vendorlist';  
+} else {
+  GVL.baseUrl = '/vendorlist';
+}
 @Component({
   router,
   components: {
