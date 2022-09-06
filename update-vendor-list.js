@@ -37,8 +37,9 @@ async function updateGVLData(){
             await downloadFile(`${latestVersionURL}/archives/vendor-list-v${counter}.json`, `./docs/vendorlist/archives/vendor-list-v${counter}.json`);  
         }
         console.log(`updating file vendor-list.json`);
-        await removeOldFile(`./docs/vendorlist/vendor-list.json`);
-        await updateVendorList(`./docs/vendorlist/vendor-list.json`, `archives/vendor-list-v${latestVersion}.json`);  
+        await downloadFile(`${latestVersionURL}/archives/vendor-list-v${latestVersion}.json`, `./docs/vendorlist/vendor-list.json`);  
+       // await removeOldFile(`./docs/vendorlist/vendor-list.json`);
+       // await updateVendorList(`./docs/vendorlist/vendor-list.json`, `archives/vendor-list-v${latestVersion}.json`);  
    }
 }
 
