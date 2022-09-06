@@ -42,7 +42,7 @@ jobs:
         with:
          commit_message: Updated GVL data list to latest version
          branch: master
-         status_options: '--untracked-files=no'
+         status_options: '--untracked-files=yes'
          add_options: '-u'
          skip_dirty_check: true 
          skip_fetch: true    
